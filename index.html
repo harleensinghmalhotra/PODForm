@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POD Shopify Brand & Store Setup – Client Intake Form</title>
+  <meta name="description"
+    content="Complete this intake form so we can properly build and brand your Shopify Print-on-Demand store.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>">
+</head>
+
+<body>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar-wrapper">
+    <div class="form-wrapper" style="padding:0 24px;margin:0 auto;">
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="progressFill"></div>
+      </div>
+      <div class="progress-label" id="progressLabel">0% complete</div>
+    </div>
+  </div>
+
+  <div class="form-wrapper">
+
+    <!-- Header -->
+    <header class="form-header">
+      <div class="brand-icon">E</div>
+      <h1>POD Shopify Brand & Store Setup – Client Intake Form</h1>
+      <p class="description">Please complete this form so we can properly build and brand your Shopify Print-on-Demand
+        store. The more detail you provide, the better we can position your brand.</p>
+    </header>
+
+    <form id="intakeForm" novalidate>
+
+      <!-- Web3Forms Config -->
+      <input type="hidden" name="access_key" value="4f37deec-ff06-4475-ba51-81e6d90d46b4">
+      <input type="hidden" name="subject" value="New POD Shopify Intake Form Submission">
+      <input type="hidden" name="from_name" value="POD Intake Form">
+      <input type="hidden" name="botcheck" value="">
+      <input type="hidden" name="replyto" id="replyto">
+
+      <!-- ==================== SECTION 1 ==================== -->
+      <div class="form-section" data-section="1">
+        <div class="section-header">
+          <span class="section-number">1</span>
+          <h2 class="section-title">Basic Information</h2>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="e.g. Jane Smith">
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com">
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="brandName">Brand Name</label>
+          <span class="field-hint">Leave blank if you haven't decided yet</span>
+          <input type="text" id="brandName" name="brandName" placeholder="Your brand name">
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="domainName">Domain Name</label>
+          <input type="text" id="domainName" name="domainName" placeholder="e.g. yourbrand.com">
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="shopifyUrl">Shopify Store URL</label>
+          <input type="url" id="shopifyUrl" name="shopifyUrl" placeholder="e.g. yourbrand.myshopify.com">
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Do you have Shopify admin access ready to share?</label>
+          <div class="option-group inline">
+            <div class="option-item">
+              <input type="radio" name="adminAccess" id="adminYes" value="Yes">
+              <label for="adminYes"><span class="indicator"></span>Yes</label>
+            </div>
+            <div class="option-item">
+              <input type="radio" name="adminAccess" id="adminNo" value="No">
+              <label for="adminNo"><span class="indicator"></span>No</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== SECTION 2 ==================== -->
+      <div class="form-section" data-section="2">
+        <div class="section-header">
+          <span class="section-number">2</span>
+          <h2 class="section-title">Brand Direction</h2>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="brandWords">Describe your brand in 3–5 words</label>
+          <input type="text" id="brandWords" name="brandWords" placeholder="e.g. Bold, Modern, Empowering">
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="targetAudience">Who is your target audience?</label>
+          <span class="field-hint">Include age range, gender, country, interests, and lifestyle</span>
+          <textarea id="targetAudience" name="targetAudience" placeholder="Describe your ideal customer..."></textarea>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">What feeling should your brand give?</label>
+          <div class="option-group">
+            <div class="option-item">
+              <input type="radio" name="brandFeeling" id="feelLuxury" value="Luxury">
+              <label for="feelLuxury"><span class="indicator"></span>Luxury</label>
+            </div>
+            <div class="option-item">
+              <input type="radio" name="brandFeeling" id="feelMinimal" value="Minimal">
+              <label for="feelMinimal"><span class="indicator"></span>Minimal</label>
+            </div>
+            <div class="option-item">
+              <input type="radio" name="brandFeeling" id="feelStreetwear" value="Streetwear">
+              <label for="feelStreetwear"><span class="indicator"></span>Streetwear</label>
+            </div>
+            <div class="option-item">
+              <input type="radio" name="brandFeeling" id="feelSoft" value="Soft / Feminine">
+              <label for="feelSoft"><span class="indicator"></span>Soft / Feminine</label>
+            </div>
+            <div class="option-item">
+              <input type="radio" name="brandFeeling" id="feelBold" value="Bold / Graphic">
+              <label for="feelBold"><span class="indicator"></span>Bold / Graphic</label>
+            </div>
+            <div class="option-item">
+              <input type="radio" name="brandFeeling" id="feelSpiritual" value="Spiritual">
+              <label for="feelSpiritual"><span class="indicator"></span>Spiritual</label>
+            </div>
+            <div class="option-item">
+              <input type="radio" name="brandFeeling" id="feelEdgy" value="Edgy">
+              <label for="feelEdgy"><span class="indicator"></span>Edgy</label>
+            </div>
+            <div class="option-item">
+              <input type="radio" name="brandFeeling" id="feelNotSure" value="Not sure">
+              <label for="feelNotSure"><span class="indicator"></span>Not sure</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="brandsLiked">List 2–3 brands you like</label>
+          <span class="field-hint">Include links if possible</span>
+          <textarea id="brandsLiked" name="brandsLiked"
+            placeholder="e.g. Nike – nike.com, Represent – representclo.com"></textarea>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Do you already have a logo?</label>
+          <div class="option-group inline">
+            <div class="option-item">
+              <input type="radio" name="hasLogo" id="logoYes" value="Yes">
+              <label for="logoYes"><span class="indicator"></span>Yes</label>
+            </div>
+            <div class="option-item">
+              <input type="radio" name="hasLogo" id="logoNo" value="No">
+              <label for="logoNo"><span class="indicator"></span>No</label>
+            </div>
+          </div>
+
+          <!-- Conditional Logo Upload -->
+          <div class="conditional-field" id="logoUploadField">
+            <div class="file-upload-area" id="logoDropzone">
+              <div class="upload-icon">📎</div>
+              <p class="upload-text"><strong>Click to upload</strong> or drag and drop your logo</p>
+              <p class="upload-hint">PNG, SVG, AI, or PDF — Max 10MB</p>
+              <input type="file" name="logoFile" id="logoFile" accept=".png,.svg,.ai,.pdf,.jpg,.jpeg">
+            </div>
+            <div class="file-list" id="logoFileList"></div>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="brandColors">Brand colors (if any)</label>
+          <input type="text" id="brandColors" name="brandColors" placeholder="e.g. Black, Gold, Cream — or hex codes">
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="fontsPref">Fonts preference (if any)</label>
+          <input type="text" id="fontsPref" name="fontsPref"
+            placeholder="e.g. Sans-serif, Montserrat, Playfair Display">
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Upload inspiration images</label>
+          <div class="file-upload-area" id="inspirationDropzone">
+            <div class="upload-icon">🖼️</div>
+            <p class="upload-text"><strong>Click to upload</strong> or drag and drop</p>
+            <p class="upload-hint">Images, moodboards, screenshots — Max 10MB each</p>
+            <input type="file" name="inspirationFiles" id="inspirationFiles" accept="image/*" multiple>
+          </div>
+          <div class="file-list" id="inspirationFileList"></div>
+        </div>
+      </div>
+
+      <!-- ==================== SECTION 3 ==================== -->
+      <div class="form-section" data-section="3">
+        <div class="section-header">
+          <span class="section-number">3</span>
+          <h2 class="section-title">Product Plan</h2>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">What products do you want to launch first?</label>
+          <div class="option-group">
+            <div class="option-item">
+              <input type="checkbox" name="products" id="prodTshirts" value="T-Shirts">
+              <label for="prodTshirts"><span class="indicator"></span>T-Shirts</label>
+            </div>
+            <div class="option-item">
+              <input type="checkbox" name="products" id="prodHoodies" value="Hoodies">
+              <label for="prodHoodies"><span class="indicator"></span>Hoodies</label>
+            </div>
+            <div class="option-item">
+              <input type="checkbox" name="products" id="prodSweatshirts" value="Sweatshirts">
+              <label for="prodSweatshirts"><span class="indicator"></span>Sweatshirts</label>
+            </div>
+            <div class="option-item">
+              <input type="checkbox" name="products" id="prodPosters" value="Posters">
+              <label for="prodPosters"><span class="indicator"></span>Posters</label>
+            </div>
+            <div class="option-item">
+              <input type="checkbox" name="products" id="prodCanvas" value="Canvas">
+              <label for="prodCanvas"><span class="indicator"></span>Canvas</label>
+            </div>
+            <div class="option-item">
+              <input type="checkbox" name="products" id="prodPhoneCases" value="Phone Cases">
+              <label for="prodPhoneCases"><span class="indicator"></span>Phone Cases</label>
+            </div>
+            <div class="option-item">
+              <input type="checkbox" name="products" id="prodToteBags" value="Tote Bags">
+              <label for="prodToteBags"><span class="indicator"></span>Tote Bags</label>
+            </div>
+            <div class="option-item">
+              <input type="checkbox" name="products" id="prodOther" value="Other">
+              <label for="prodOther"><span class="indicator"></span>Other</label>
+            </div>
+          </div>
+
+          <!-- Conditional: Other products input -->
+          <div class="conditional-field" id="otherProductsField">
+            <div class="other-input-row">
+              <input type="text" id="otherProductInput" placeholder="e.g. Mugs, Stickers, Hats..."
+                class="other-text-input">
+              <button type="button" id="addOtherProduct" class="add-btn">+ Add</button>
+            </div>
+            <div class="tags-container" id="otherProductTags"></div>
+            <input type="hidden" name="otherProducts" id="otherProductsHidden">
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Preferred POD provider</label>
+          <div class="option-group inline">
+            <div class="option-item">
+              <input type="radio" name="podProvider" id="provPrintful" value="Printful">
+              <label for="provPrintful"><span class="indicator"></span>Printful</label>
+            </div>
+            <div class="option-item">
+              <input type="radio" name="podProvider" id="provPrintify" value="Printify">
+              <label for="provPrintify"><span class="indicator"></span>Printify</label>
+            </div>
+            <div class="option-item">
+              <input type="radio" name="podProvider" id="provGelato" value="Gelato">
+              <label for="provGelato"><span class="indicator"></span>Gelato</label>
+            </div>
+            <div class="option-item">
+              <input type="radio" name="podProvider" id="provNotSure" value="Not sure">
+              <label for="provNotSure"><span class="indicator"></span>Not sure</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="priceRange">Target price range per product</label>
+          <input type="text" id="priceRange" name="priceRange" placeholder="e.g. $25–$40">
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Brand positioning</label>
+          <div class="option-group inline">
+            <div class="option-item">
+              <input type="radio" name="positioning" id="posPremium" value="Premium pricing">
+              <label for="posPremium"><span class="indicator"></span>Premium pricing</label>
+            </div>
+            <div class="option-item">
+              <input type="radio" name="positioning" id="posMid" value="Mid-range">
+              <label for="posMid"><span class="indicator"></span>Mid-range</label>
+            </div>
+            <div class="option-item">
+              <input type="radio" name="positioning" id="posAffordable" value="Affordable / Volume">
+              <label for="posAffordable"><span class="indicator"></span>Affordable / Volume</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== SECTION 4 ==================== -->
+      <div class="form-section" data-section="4">
+        <div class="section-header">
+          <span class="section-number">4</span>
+          <h2 class="section-title">Content Assets</h2>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="contentImagesLink">Share your 25–35 images</label>
+          <span class="field-hint">Upload your images to Google Drive, Dropbox, or WeTransfer and paste the share link
+            below</span>
+          <input type="url" id="contentImagesLink" name="contentImagesLink"
+            placeholder="e.g. https://drive.google.com/drive/folders/...">
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Do you own full rights to these images?</label>
+          <div class="option-group inline">
+            <div class="option-item">
+              <input type="radio" name="imageRights" id="rightsYes" value="Yes">
+              <label for="rightsYes"><span class="indicator"></span>Yes</label>
+            </div>
+            <div class="option-item">
+              <input type="radio" name="imageRights" id="rightsNo" value="No">
+              <label for="rightsNo"><span class="indicator"></span>No</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Do these images need editing?</label>
+          <div class="option-group inline">
+            <div class="option-item">
+              <input type="radio" name="needsEditing" id="editYes" value="Yes">
+              <label for="editYes"><span class="indicator"></span>Yes</label>
+            </div>
+            <div class="option-item">
+              <input type="radio" name="needsEditing" id="editNo" value="No">
+              <label for="editNo"><span class="indicator"></span>No</label>
+            </div>
+            <div class="option-item">
+              <input type="radio" name="needsEditing" id="editNotSure" value="Not sure">
+              <label for="editNotSure"><span class="indicator"></span>Not sure</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Do you want professional product mockups created?</label>
+          <div class="option-group inline">
+            <div class="option-item">
+              <input type="radio" name="mockups" id="mockYes" value="Yes">
+              <label for="mockYes"><span class="indicator"></span>Yes</label>
+            </div>
+            <div class="option-item">
+              <input type="radio" name="mockups" id="mockNo" value="No">
+              <label for="mockNo"><span class="indicator"></span>No</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== SECTION 5 ==================== -->
+      <div class="form-section" data-section="5">
+        <div class="section-header">
+          <span class="section-number">5</span>
+          <h2 class="section-title">Launch & Marketing</h2>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="launchDate">Target launch date</label>
+          <input type="date" id="launchDate" name="launchDate">
+        </div>
+      </div>
+
+      <!-- ==================== SECTION 6 ==================== -->
+      <div class="form-section" data-section="6">
+        <div class="section-header">
+          <span class="section-number">6</span>
+          <h2 class="section-title">Vision & Expectations</h2>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="successVision">What does success look like in 3 months?</label>
+          <textarea id="successVision" name="successVision"
+            placeholder="Describe your goals — revenue, followers, product sales, etc."></textarea>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Is this project a hobby, side income, or serious brand?</label>
+          <div class="option-group inline">
+            <div class="option-item">
+              <input type="radio" name="projectType" id="typeHobby" value="Hobby">
+              <label for="typeHobby"><span class="indicator"></span>Hobby</label>
+            </div>
+            <div class="option-item">
+              <input type="radio" name="projectType" id="typeSide" value="Side income">
+              <label for="typeSide"><span class="indicator"></span>Side income</label>
+            </div>
+            <div class="option-item">
+              <input type="radio" name="projectType" id="typeSerious" value="Serious long-term brand">
+              <label for="typeSerious"><span class="indicator"></span>Serious long-term brand</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <div class="submit-section">
+        <button type="submit" class="submit-btn" id="submitBtn">
+          <span class="btn-text">Submit Form</span>
+          <span class="btn-icon">→</span>
+          <span class="btn-loading" style="display:none;">Sending...</span>
+        </button>
+      </div>
+
+    </form>
+
+    <footer class="form-footer">
+      <p>A copy of your responses will be sent to the email address you provide.</p>
+    </footer>
+  </div>
+
+  <!-- Success Overlay -->
+  <div class="success-overlay" id="successOverlay">
+    <div class="success-card">
+      <div class="success-icon">✓</div>
+      <h2>Thank You!</h2>
+      <p>Thank you for submitting your information. We will review your details and reach out within 24–48 hours to
+        begin your POD store setup.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
