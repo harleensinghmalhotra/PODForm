@@ -239,7 +239,10 @@
         body: formData
       });
 
-      const result = await response.json();
+      const text = await response.text();
+      console.log('Web3Forms response:', text);
+      let result;
+      try { result = JSON.parse(text); } catch (e) { throw new Error('Invalid response: ' + text); }
 
       if (result.success) {
         // Show success overlay
@@ -250,7 +253,7 @@
       }
     } catch (error) {
       console.error('Form submission error:', error);
-      alert('Something went wrong. Please try again or contact us directly.');
+      alert('Something went wrong: ' + error.message);
 
       // Reset button
       btnText.style.display = 'inline';
@@ -266,14 +269,7 @@
     successOverlay.classList.remove('active');
   });
 
-  // ============ SMOOTH SCROLL INTO VIEW ON FOCUS ============
-  form.querySelectorAll('input:not([type="hidden"]), textarea').forEach(field => {
-    field.addEventListener('focus', () => {
-      setTimeout(() => {
-        field.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 200);
-    });
-  });
+
 
   // ============ INITIAL STATE ============
   updateProgress();
