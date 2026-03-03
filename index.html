@@ -51,36 +51,36 @@
         </div>
 
         <div class="field-group">
-          <label class="field-label" for="fullName">Full Name</label>
-          <input type="text" id="fullName" name="fullName" placeholder="e.g. Jane Smith">
+          <label class="field-label" for="fullName">Full Name <span class="required">*</span></label>
+          <input type="text" id="fullName" name="fullName" placeholder="e.g. Jane Smith" required>
         </div>
 
         <div class="field-group">
-          <label class="field-label" for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="you@example.com">
+          <label class="field-label" for="email">Email Address <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
         </div>
 
         <div class="field-group">
-          <label class="field-label" for="brandName">Brand Name</label>
-          <span class="field-hint">Leave blank if you haven't decided yet</span>
-          <input type="text" id="brandName" name="brandName" placeholder="Your brand name">
+          <label class="field-label" for="brandName">Brand Name <span class="required">*</span></label>
+          <input type="text" id="brandName" name="brandName" placeholder="Your brand name" required>
         </div>
 
         <div class="field-group">
-          <label class="field-label" for="domainName">Domain Name</label>
-          <input type="text" id="domainName" name="domainName" placeholder="e.g. yourbrand.com">
+          <label class="field-label" for="domainName">Domain Name <span class="required">*</span></label>
+          <input type="text" id="domainName" name="domainName" placeholder="e.g. yourbrand.com" required>
         </div>
 
         <div class="field-group">
-          <label class="field-label" for="shopifyUrl">Shopify Store URL</label>
-          <input type="url" id="shopifyUrl" name="shopifyUrl" placeholder="e.g. yourbrand.myshopify.com">
+          <label class="field-label" for="shopifyUrl">Shopify Store URL <span class="required">*</span></label>
+          <input type="url" id="shopifyUrl" name="shopifyUrl" placeholder="e.g. yourbrand.myshopify.com" required>
         </div>
 
         <div class="field-group">
-          <label class="field-label">Do you have Shopify admin access ready to share?</label>
+          <label class="field-label">Do you have Shopify admin access ready to share? <span
+              class="required">*</span></label>
           <div class="option-group inline">
             <div class="option-item">
-              <input type="radio" name="adminAccess" id="adminYes" value="Yes">
+              <input type="radio" name="adminAccess" id="adminYes" value="Yes" required>
               <label for="adminYes"><span class="indicator"></span>Yes</label>
             </div>
             <div class="option-item">
@@ -99,21 +99,24 @@
         </div>
 
         <div class="field-group">
-          <label class="field-label" for="brandWords">Describe your brand in 3–5 words</label>
-          <input type="text" id="brandWords" name="brandWords" placeholder="e.g. Bold, Modern, Empowering">
+          <label class="field-label" for="brandWords">Describe your brand in 3–5 words <span
+              class="required">*</span></label>
+          <input type="text" id="brandWords" name="brandWords" placeholder="e.g. Bold, Modern, Empowering" required>
         </div>
 
         <div class="field-group">
-          <label class="field-label" for="targetAudience">Who is your target audience?</label>
+          <label class="field-label" for="targetAudience">Who is your target audience? <span
+              class="required">*</span></label>
           <span class="field-hint">Include age range, gender, country, interests, and lifestyle</span>
-          <textarea id="targetAudience" name="targetAudience" placeholder="Describe your ideal customer..."></textarea>
+          <textarea id="targetAudience" name="targetAudience" placeholder="Describe your ideal customer..."
+            required></textarea>
         </div>
 
         <div class="field-group">
-          <label class="field-label">What feeling should your brand give?</label>
+          <label class="field-label">What feeling should your brand give? <span class="required">*</span></label>
           <div class="option-group">
             <div class="option-item">
-              <input type="radio" name="brandFeeling" id="feelLuxury" value="Luxury">
+              <input type="radio" name="brandFeeling" id="feelLuxury" value="Luxury" required>
               <label for="feelLuxury"><span class="indicator"></span>Luxury</label>
             </div>
             <div class="option-item">
@@ -148,17 +151,17 @@
         </div>
 
         <div class="field-group">
-          <label class="field-label" for="brandsLiked">List 2–3 brands you like</label>
+          <label class="field-label" for="brandsLiked">List 2–3 brands you like <span class="required">*</span></label>
           <span class="field-hint">Include links if possible</span>
-          <textarea id="brandsLiked" name="brandsLiked"
-            placeholder="e.g. Nike – nike.com, Represent – representclo.com"></textarea>
+          <textarea id="brandsLiked" name="brandsLiked" placeholder="e.g. Nike – nike.com, Represent – representclo.com"
+            required></textarea>
         </div>
 
         <div class="field-group">
-          <label class="field-label">Do you already have a logo?</label>
+          <label class="field-label">Do you already have a logo? <span class="required">*</span></label>
           <div class="option-group inline">
             <div class="option-item">
-              <input type="radio" name="hasLogo" id="logoYes" value="Yes">
+              <input type="radio" name="hasLogo" id="logoYes" value="Yes" required>
               <label for="logoYes"><span class="indicator"></span>Yes</label>
             </div>
             <div class="option-item">
@@ -180,23 +183,24 @@
         </div>
 
         <div class="field-group">
-          <label class="field-label" for="brandColors">Brand colors (if any)</label>
-          <input type="text" id="brandColors" name="brandColors" placeholder="e.g. Black, Gold, Cream — or hex codes">
+          <label class="field-label" for="brandColors">Brand colors <span class="required">*</span></label>
+          <input type="text" id="brandColors" name="brandColors" placeholder="e.g. Black, Gold, Cream — or hex codes"
+            required>
         </div>
 
         <div class="field-group">
-          <label class="field-label" for="fontsPref">Fonts preference (if any)</label>
-          <input type="text" id="fontsPref" name="fontsPref"
-            placeholder="e.g. Sans-serif, Montserrat, Playfair Display">
+          <label class="field-label" for="fontsPref">Fonts preference <span class="required">*</span></label>
+          <input type="text" id="fontsPref" name="fontsPref" placeholder="e.g. Sans-serif, Montserrat, Playfair Display"
+            required>
         </div>
 
         <div class="field-group">
-          <label class="field-label">Upload inspiration images</label>
+          <label class="field-label">Upload inspiration images <span class="required">*</span></label>
           <div class="file-upload-area" id="inspirationDropzone">
             <div class="upload-icon">🖼️</div>
             <p class="upload-text"><strong>Click to upload</strong> or drag and drop</p>
             <p class="upload-hint">Images, moodboards, screenshots — Max 10MB each</p>
-            <input type="file" name="inspirationFiles" id="inspirationFiles" accept="image/*" multiple>
+            <input type="file" name="inspirationFiles" id="inspirationFiles" accept="image/*" multiple required>
           </div>
           <div class="file-list" id="inspirationFileList"></div>
         </div>
@@ -210,7 +214,7 @@
         </div>
 
         <div class="field-group">
-          <label class="field-label">What products do you want to launch first?</label>
+          <label class="field-label">What products do you want to launch first? <span class="required">*</span></label>
           <div class="option-group">
             <div class="option-item">
               <input type="checkbox" name="products" id="prodTshirts" value="T-Shirts">
@@ -259,10 +263,10 @@
         </div>
 
         <div class="field-group">
-          <label class="field-label">Preferred POD provider</label>
+          <label class="field-label">Preferred POD provider <span class="required">*</span></label>
           <div class="option-group inline">
             <div class="option-item">
-              <input type="radio" name="podProvider" id="provPrintful" value="Printful">
+              <input type="radio" name="podProvider" id="provPrintful" value="Printful" required>
               <label for="provPrintful"><span class="indicator"></span>Printful</label>
             </div>
             <div class="option-item">
@@ -281,15 +285,16 @@
         </div>
 
         <div class="field-group">
-          <label class="field-label" for="priceRange">Target price range per product</label>
-          <input type="text" id="priceRange" name="priceRange" placeholder="e.g. $25–$40">
+          <label class="field-label" for="priceRange">Target price range per product <span
+              class="required">*</span></label>
+          <input type="text" id="priceRange" name="priceRange" placeholder="e.g. $25–$40" required>
         </div>
 
         <div class="field-group">
-          <label class="field-label">Brand positioning</label>
+          <label class="field-label">Brand positioning <span class="required">*</span></label>
           <div class="option-group inline">
             <div class="option-item">
-              <input type="radio" name="positioning" id="posPremium" value="Premium pricing">
+              <input type="radio" name="positioning" id="posPremium" value="Premium pricing" required>
               <label for="posPremium"><span class="indicator"></span>Premium pricing</label>
             </div>
             <div class="option-item">
@@ -312,18 +317,19 @@
         </div>
 
         <div class="field-group">
-          <label class="field-label" for="contentImagesLink">Share your 25–35 images</label>
+          <label class="field-label" for="contentImagesLink">Share your 25–35 images <span
+              class="required">*</span></label>
           <span class="field-hint">Upload your images to Google Drive, Dropbox, or WeTransfer and paste the share link
             below</span>
           <input type="url" id="contentImagesLink" name="contentImagesLink"
-            placeholder="e.g. https://drive.google.com/drive/folders/...">
+            placeholder="e.g. https://drive.google.com/drive/folders/..." required>
         </div>
 
         <div class="field-group">
-          <label class="field-label">Do you own full rights to these images?</label>
+          <label class="field-label">Do you own full rights to these images? <span class="required">*</span></label>
           <div class="option-group inline">
             <div class="option-item">
-              <input type="radio" name="imageRights" id="rightsYes" value="Yes">
+              <input type="radio" name="imageRights" id="rightsYes" value="Yes" required>
               <label for="rightsYes"><span class="indicator"></span>Yes</label>
             </div>
             <div class="option-item">
@@ -334,10 +340,10 @@
         </div>
 
         <div class="field-group">
-          <label class="field-label">Do these images need editing?</label>
+          <label class="field-label">Do these images need editing? <span class="required">*</span></label>
           <div class="option-group inline">
             <div class="option-item">
-              <input type="radio" name="needsEditing" id="editYes" value="Yes">
+              <input type="radio" name="needsEditing" id="editYes" value="Yes" required>
               <label for="editYes"><span class="indicator"></span>Yes</label>
             </div>
             <div class="option-item">
@@ -350,37 +356,6 @@
             </div>
           </div>
         </div>
-
-      </div>
-
-      <!-- Submit -->
-      <div class="submit-section">
-        <button type="submit" class="submit-btn" id="submitBtn">
-          <span class="btn-text">Submit Form</span>
-          <span class="btn-icon">→</span>
-          <span class="btn-loading" style="display:none;">Sending...</span>
-        </button>
-      </div>
-
-    </form>
-
-    <footer class="form-footer">
-      <p>A copy of your responses will be sent to the email address you provide.</p>
-    </footer>
-  </div>
-
-  <!-- Success Overlay -->
-  <div class="success-overlay" id="successOverlay">
-    <div class="success-card">
-      <div class="success-icon">✓</div>
-      <h2>Thank You!</h2>
-      <p>Thank you for submitting your information. We will review your details and reach out within 24–48 hours to
-        begin your POD store setup.</p>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
       </div>
 
       <!-- Submit -->

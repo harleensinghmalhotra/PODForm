@@ -196,6 +196,11 @@ body {
     font-weight: 400;
 }
 
+.required {
+    color: var(--error);
+    font-weight: 400;
+}
+
 /* Text inputs & Textareas */
 input[type="text"],
 input[type="email"],
