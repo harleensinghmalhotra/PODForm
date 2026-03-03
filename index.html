@@ -351,64 +351,36 @@
           </div>
         </div>
 
-        <div class="field-group">
-          <label class="field-label">Do you want professional product mockups created?</label>
-          <div class="option-group inline">
-            <div class="option-item">
-              <input type="radio" name="mockups" id="mockYes" value="Yes">
-              <label for="mockYes"><span class="indicator"></span>Yes</label>
-            </div>
-            <div class="option-item">
-              <input type="radio" name="mockups" id="mockNo" value="No">
-              <label for="mockNo"><span class="indicator"></span>No</label>
-            </div>
-          </div>
-        </div>
       </div>
 
-      <!-- ==================== SECTION 5 ==================== -->
-      <div class="form-section" data-section="5">
-        <div class="section-header">
-          <span class="section-number">5</span>
-          <h2 class="section-title">Launch & Marketing</h2>
-        </div>
-
-        <div class="field-group">
-          <label class="field-label" for="launchDate">Target launch date</label>
-          <input type="date" id="launchDate" name="launchDate">
-        </div>
+      <!-- Submit -->
+      <div class="submit-section">
+        <button type="submit" class="submit-btn" id="submitBtn">
+          <span class="btn-text">Submit Form</span>
+          <span class="btn-icon">→</span>
+          <span class="btn-loading" style="display:none;">Sending...</span>
+        </button>
       </div>
 
-      <!-- ==================== SECTION 6 ==================== -->
-      <div class="form-section" data-section="6">
-        <div class="section-header">
-          <span class="section-number">6</span>
-          <h2 class="section-title">Vision & Expectations</h2>
-        </div>
+    </form>
 
-        <div class="field-group">
-          <label class="field-label" for="successVision">What does success look like in 3 months?</label>
-          <textarea id="successVision" name="successVision"
-            placeholder="Describe your goals — revenue, followers, product sales, etc."></textarea>
-        </div>
+    <footer class="form-footer">
+      <p>A copy of your responses will be sent to the email address you provide.</p>
+    </footer>
+  </div>
 
-        <div class="field-group">
-          <label class="field-label">Is this project a hobby, side income, or serious brand?</label>
-          <div class="option-group inline">
-            <div class="option-item">
-              <input type="radio" name="projectType" id="typeHobby" value="Hobby">
-              <label for="typeHobby"><span class="indicator"></span>Hobby</label>
-            </div>
-            <div class="option-item">
-              <input type="radio" name="projectType" id="typeSide" value="Side income">
-              <label for="typeSide"><span class="indicator"></span>Side income</label>
-            </div>
-            <div class="option-item">
-              <input type="radio" name="projectType" id="typeSerious" value="Serious long-term brand">
-              <label for="typeSerious"><span class="indicator"></span>Serious long-term brand</label>
-            </div>
-          </div>
-        </div>
+  <!-- Success Overlay -->
+  <div class="success-overlay" id="successOverlay">
+    <div class="success-card">
+      <div class="success-icon">✓</div>
+      <h2>Thank You!</h2>
+      <p>Thank you for submitting your information. We will review your details and reach out within 24–48 hours to
+        begin your POD store setup.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
       </div>
 
       <!-- Submit -->
