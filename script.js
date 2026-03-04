@@ -3,8 +3,6 @@
 
   // ============ ELEMENTS ============
   const form = document.getElementById('intakeForm');
-  const progressFill = document.getElementById('progressFill');
-  const progressLabel = document.getElementById('progressLabel');
   const successOverlay = document.getElementById('successOverlay');
   const submitBtn = document.getElementById('submitBtn');
 
@@ -22,63 +20,6 @@
       replyToInput.value = emailInput.value;
     });
   }
-
-  // ============ PROGRESS TRACKING ============
-  const trackedFields = () => {
-    const fields = [];
-
-    // Text / email / url / date inputs (exclude hidden)
-    form.querySelectorAll('input[type="text"], input[type="email"], input[type="url"], input[type="date"]').forEach(input => {
-      fields.push({ type: 'input', el: input, filled: () => input.value.trim() !== '' });
-    });
-
-    // Textareas
-    form.querySelectorAll('textarea').forEach(textarea => {
-      fields.push({ type: 'textarea', el: textarea, filled: () => textarea.value.trim() !== '' });
-    });
-
-    // Radio groups
-    const radioGroups = new Set();
-    form.querySelectorAll('input[type="radio"]').forEach(radio => radioGroups.add(radio.name));
-    radioGroups.forEach(name => {
-      fields.push({
-        type: 'radio',
-        name,
-        filled: () => form.querySelector(`input[name="${name}"]:checked`) !== null
-      });
-    });
-
-    // Checkbox groups
-    const checkboxGroups = new Set();
-    form.querySelectorAll('input[type="checkbox"]').forEach(cb => checkboxGroups.add(cb.name));
-    checkboxGroups.forEach(name => {
-      fields.push({
-        type: 'checkbox',
-        name,
-        filled: () => form.querySelector(`input[name="${name}"]:checked`) !== null
-      });
-    });
-
-    // File inputs
-    form.querySelectorAll('input[type="file"]').forEach(fileInput => {
-      fields.push({ type: 'file', el: fileInput, filled: () => fileInput.files.length > 0 });
-    });
-
-    return fields;
-  };
-
-  function updateProgress() {
-    const fields = trackedFields();
-    const total = fields.length;
-    const filled = fields.filter(f => f.filled()).length;
-    const pct = Math.round((filled / total) * 100);
-
-    progressFill.style.width = pct + '%';
-    progressLabel.textContent = pct + '% complete';
-  }
-
-  form.addEventListener('input', updateProgress);
-  form.addEventListener('change', updateProgress);
 
   // ============ CONDITIONAL LOGO UPLOAD ============
   function toggleLogoUpload() {
@@ -116,13 +57,11 @@
     otherProducts.push(val);
     otherProductInput.value = '';
     renderTags();
-    updateProgress();
   }
 
   function removeProduct(index) {
     otherProducts.splice(index, 1);
     renderTags();
-    updateProgress();
   }
 
   function renderTags() {
@@ -190,7 +129,6 @@
         `;
         list.appendChild(item);
       });
-      updateProgress();
     });
   }
 
@@ -201,7 +139,6 @@
   }
 
   setupFileUpload('logoFile', 'logoFileList');
-  setupFileUpload('inspirationFiles', 'inspirationFileList');
 
   // ============ FORM SUBMISSION VIA WEB3FORMS ============
   form.addEventListener('submit', async (e) => {
@@ -221,12 +158,10 @@
     const formData = new FormData(form);
 
     // Collect checkbox values as comma-separated strings
-    // (Web3Forms shows duplicate keys oddly, so we merge them)
     const checkboxGroups = ['products'];
     checkboxGroups.forEach(name => {
       const checked = Array.from(form.querySelectorAll(`input[name="${name}"]:checked`))
         .map(cb => cb.value);
-      // Remove individual entries and add merged one
       formData.delete(name);
       if (checked.length > 0) {
         formData.append(name, checked.join(', '));
@@ -245,7 +180,7 @@
       try { result = JSON.parse(text); } catch (e) { throw new Error('Invalid response: ' + text); }
 
       if (result.success) {
-        // Show success overlay
+        // Show success overlay and keep it visible
         successOverlay.classList.add('active');
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
@@ -263,15 +198,5 @@
       submitBtn.style.opacity = '1';
     }
   });
-
-  // Close success overlay on click
-  successOverlay.addEventListener('click', () => {
-    successOverlay.classList.remove('active');
-  });
-
-
-
-  // ============ INITIAL STATE ============
-  updateProgress();
 
 })();
